@@ -1,25 +1,19 @@
-import logo from './logo.svg';
-import Button from './Components/Button'
 import './App.css';
+import Emojis from './Components/Emojis';
+
+const emojis = [
+  {emoji: '😃', name: "happy face" },
+  {emoji: '🤗', name: "hug face" },
+  {emoji: '🤔', name: "thinking face" }
+]
 
 const App = () => {
+  const displayEmojiName = (event) => alert(event.target.id);
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-        <Button />
-      </header>
+    <div className="container">
+      <h1>Hello World!</h1>
+      <p>I'm writing JSX</p>
+      <Emojis data={emojis} onClick={displayEmojiName}/>
     </div>
   );
 }
