@@ -5,10 +5,10 @@ const Emojis = (props) => {
     const { data, onClick } = props
     return (
         <div>
-            <ul>
+            <ul className="emoji-ul">
             {data.map(emoji => (
-            <li key={emoji.name}>
-                <button onClick={onClick}>
+            <li className="emoji-li" key={emoji.name}>
+                <button className="emoji-btn" onClick={onClick}>
                 <span role="img" aria-label={emoji.name} id={emoji.name}>{emoji.emoji}</span>
                 </button>
             </li>
@@ -18,4 +18,4 @@ const Emojis = (props) => {
     )
 }
 
-export default Emojis;
+export { Emojis }

@@ -1,0 +1,13 @@
+.modal {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 500;
+    background-color: #ffffff;
+    width: 35%;
+    border: 1px 1px 1px #212121;
+    box-shadow: 2px 4px 9px 1px #33333382;
+    padding: 16px;
+    box-sizing: border-box;
+    transition: all 0.3s ease-out;
+}

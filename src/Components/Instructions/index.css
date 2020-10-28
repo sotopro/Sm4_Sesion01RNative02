@@ -1,5 +1,9 @@
-.container {
+.instructions {
     display: flex;
     flex-direction: column;
     align-items: center;
+}
+
+.instructions span {
+    font-size: 4em;
 }
