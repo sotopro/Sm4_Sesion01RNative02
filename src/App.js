@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import configFire from './configFire'
 import Login from './components/Login';
 import './App.css'
@@ -61,8 +61,25 @@ const App = () => {
             }
         })
     }
+
+    useEffect(() => {
+        authListener();
+    }, [user])
     return (
-        <Login />
+        <div className="App">
+            <Login
+                email={email}
+                setEmail={setEmail}
+                password={password}
+                setPassword={setPassword}
+                handleLogin={handleLogin}
+                handleSignUp={handleSignUp}
+                hasAccount={hasAccount}
+                setHasAccount={setHasAccount}
+                emailError={emailError}
+                passwordError={passwordError}
+            />
+        </div>
     )
 }
 
