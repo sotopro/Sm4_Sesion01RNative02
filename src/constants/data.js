@@ -3,7 +3,7 @@ export const data = [
         name: 'Lion',
         scientificName: 'Pathero leo',
         size: 140,
-        diet: ['meat']
+        diet: ['meat'],
     },
     {
         name: 'Gorilla',
