@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import {data} from '../../constants/data'
 import {AnimalCard} from '../../components/Card/AnimalCard'
-import '.././App.css';
+import './index.css';
 import { Emojis, Instructions, Modal } from '../../components'
 const emojis = [
   {emoji: '😃', name: "happy face" },
@@ -9,7 +9,8 @@ const emojis = [
   {emoji: '🤔', name: "thinking face" }
 ]
 
-const Dashboard = () => {
+const Dashboard = (props) => {
+  const { handleLogout } = props;
   const [visible, setVisible] = useState(false);
   const [emojiId, setEmojiId] = useState()
   const [animalModal, setAnimalModal] = useState(false)
@@ -32,6 +33,12 @@ const Dashboard = () => {
   }
   return (
     <>
+    <section className="navMenu">
+      <nav>
+        <h2>Welcome</h2>
+        <button onClick={handleLogout}>Logout</button>
+      </nav>
+    </section>
     <div className="containerAnimalCard">
       <h1>Hello World!</h1>
       <Instructions />

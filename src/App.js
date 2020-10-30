@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import configFire from './configFire'
 import Login from './components/Login';
+import Dashboard from './screens/Dashboard';
 import './App.css'
 
 const App = () => {
@@ -67,7 +68,10 @@ const App = () => {
     }, [user])
     return (
         <div className="app">
-            <Login
+            {user ? (
+                <Dashboard handleLogout={handleLogout} />
+            ) : (
+                <Login
                 email={email}
                 setEmail={setEmail}
                 password={password}
@@ -79,6 +83,7 @@ const App = () => {
                 emailError={emailError}
                 passwordError={passwordError}
             />
+            ) }
         </div>
     )
 }

@@ -1,3 +1,29 @@
+.navMenu {
+    width: 100%;
+}
+
+.navMenu nav {
+    background: #3bacbb;
+    width: 100%;
+    padding: 20px 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.navMenu nav h2 {
+    color: #ffffff;
+}
+
+.navMenu nav button {
+    width: 90px;
+    padding: 8px 0;
+    background: rgba(18,107,109,0.9);
+    color: #ffffff;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
 .containerAnimalCard {
     display: flex;
     flex-direction: column;
