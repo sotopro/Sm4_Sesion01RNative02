@@ -1,0 +1,12 @@
+.containerAnimalCard {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.wrapperAnimalCard {
+    display: flex;
+    /* flex-wrap: wrap; */
+    justify-content: space-evenly;
+    padding: 20px;
+}

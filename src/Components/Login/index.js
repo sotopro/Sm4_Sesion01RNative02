@@ -1,25 +1,36 @@
 import React from 'react'
-
+import './index.css'
 const Login = (props) => {
-    const { hasAccount, setHasAccount } = props
+    const { 
+        email,
+        setEmail,
+        password,
+        setPassword,
+        handleLogin,
+        handleSignUp,
+        hasAccount,
+        setHasAccount,
+        emailError,
+        passwordError
+    } = props
     return (
         <section className="login">
             <div className="loginContainer">
                 <label>Username</label>
-                <input type="text" autoFocus required value={} onChange={e => e.target.value} />
-                <p className="errorMsg">mensaje de error</p>
+                <input type="text" autoFocus required value={email} onChange={e => setEmail(e.target.value)} />
+                <p className="errorMsg">{emailError}</p>
                 <label>Password</label>
-                <input type="text" required value={} onChange={e => e.target.value} />
-                <p className="errorMsg">mensaje de error password</p>
+                <input type="text" required value={password} onChange={e => setPassword(e.target.value)} />
+                <p className="errorMsg">{passwordError}</p>
                 <div className="btnContainer">
                     {hasAccount ? (
                         <>
-                            <button onClick={}>Sign in</button>
-                            <p>don't have an account ? <span onClick={() => setHasAccount(hasAccount)}>Sign up</span></p>
+                            <button onClick={handleLogin}>Sign in</button>
+                            <p>don't have an account ? <span onClick={() => setHasAccount(!hasAccount)}>Sign up</span></p>
                         </>
                     ) : (
                         <>
-                        <button onClick={}>Sign up</button>
+                        <button onClick={handleSignUp}>Sign up</button>
                         <p>have an account ? <span onClick={() => setHasAccount(!hasAccount)}>Sign in</span></p>
                         </>
                     )}

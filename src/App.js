@@ -22,7 +22,7 @@ const App = () => {
                         setEmailError(err.message)
                         break;
                     case 'auth/wrong-password': 
-                    setPasswordError(err.message)
+                        setPasswordError(err.message)
                         break
                     default: 
                         setEmailError('Something went wrong!')
@@ -66,7 +66,7 @@ const App = () => {
         authListener();
     }, [user])
     return (
-        <div className="App">
+        <div className="app">
             <Login
                 email={email}
                 setEmail={setEmail}

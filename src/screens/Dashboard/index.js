@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
-import {data} from './constants/data'
-import {AnimalCard} from './components/Card/AnimalCard'
-import './App.css';
-import { Emojis, Instructions, Modal } from './components'
+import {data} from '../../constants/data'
+import {AnimalCard} from '../../components/Card/AnimalCard'
+import '.././App.css';
+import { Emojis, Instructions, Modal } from '../../components'
 const emojis = [
   {emoji: '😃', name: "happy face" },
   {emoji: '🤗', name: "hug face" },
@@ -32,7 +32,7 @@ const Dashboard = () => {
   }
   return (
     <>
-    <div className="container">
+    <div className="containerAnimalCard">
       <h1>Hello World!</h1>
       <Instructions />
       <p>I'm writing JSX</p>
