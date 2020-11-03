@@ -14,7 +14,6 @@ const Login = (props) => {
         passwordError
     } = props
 
-    console.log('hasaccount', hasAccount, setHasAccount)
     return (
         <section className="login">
             <div className="loginContainer">
