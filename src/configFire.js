@@ -11,6 +11,8 @@ const { REACT_APP_API_KEY,
   REACT_APP_APP_ID
 } = process.env || {}
 
+console.log('process.env', process.env)
+
 var firebaseConfig = {
     apiKey: REACT_APP_API_KEY,
     authDomain: REACT_APP_AUTH_DOMAIN,

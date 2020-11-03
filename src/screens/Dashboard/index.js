@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import configFire from '../../configFire'
 import {data} from '../../constants/data'
 import {AnimalCard} from '../../components/Card/AnimalCard'
 import './index.css';
@@ -10,7 +11,6 @@ const emojis = [
 ]
 
 const Dashboard = (props) => {
-  const { handleLogout } = props;
   const [visible, setVisible] = useState(false);
   const [emojiId, setEmojiId] = useState()
   const [animalModal, setAnimalModal] = useState(false)
@@ -23,6 +23,11 @@ const Dashboard = (props) => {
     setVisible(false)
     setAnimalModal(false)
   }
+
+  const handleLogout = () => {
+    configFire.auth().signOut();
+}
+
 
   const showAdditional = (additional) => {
     const ModalInformation = Object.entries(additional)

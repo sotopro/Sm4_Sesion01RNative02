@@ -13,6 +13,8 @@ const Login = (props) => {
         emailError,
         passwordError
     } = props
+
+    console.log('hasaccount', hasAccount, setHasAccount)
     return (
         <section className="login">
             <div className="loginContainer">
@@ -26,12 +28,12 @@ const Login = (props) => {
                     {hasAccount ? (
                         <>
                             <button onClick={handleLogin}>Sign in</button>
-                            <p>don't have an account ? <span onClick={() => setHasAccount(!hasAccount)}>Sign up</span></p>
+                            <p>don't have an account ? <span onClick={() => setHasAccount && setHasAccount(!hasAccount)}>Sign up</span></p>
                         </>
                     ) : (
                         <>
                         <button onClick={handleSignUp}>Sign up</button>
-                        <p>have an account ? <span onClick={() => setHasAccount(!hasAccount)}>Sign in</span></p>
+                        <p>have an account ? <span onClick={() => setHasAccount && setHasAccount(!hasAccount)}>Sign in</span></p>
                         </>
                     )}
                 </div>
