@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import configFire from '../../configFire'
-
+import Profiles from '../../components/Profiles'
 import Login from '../../components/Login'
 
 const LoginScreen = () => {
