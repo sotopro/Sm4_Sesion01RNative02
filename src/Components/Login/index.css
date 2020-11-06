@@ -57,6 +57,11 @@
     background-color: #26c6da;
     cursor: pointer;
 }
+.login .loginContainer .btnContainer button a{
+    color: #ffffff;
+    outline: none;
+    text-decoration: none;
+}
 
 .login .loginContainer .btnContainer p {
     margin: 14px 0 0 0 ;

@@ -1,5 +1,4 @@
 import React from 'react'
-import styled from 'styled-components'
 import LoginScreen from './screens/Login';
 import DashboardScreen from './screens/Dashboard';
 import ProfileScreen from './screens/Profiles'

@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 import './index.css'
 const Login = (props) => {
     const { 
@@ -11,7 +12,8 @@ const Login = (props) => {
         hasAccount,
         setHasAccount,
         emailError,
-        passwordError
+        passwordError,
+        user
     } = props
 
     return (
